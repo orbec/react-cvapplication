@@ -1,5 +1,5 @@
 footer {
-  background-color: rgba(190, 191, 193, 79%);
+  background-color: var(--medium-color);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,0 +1,51 @@
+header {
+  background-color: var(--medium-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+h1,
+h2 {
+  color: var(--bright-color);
+}
+
+div {
+  text-align: justify;
+  width: 70%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 60%;
+}
+
+.profile-container {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30%;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: none;
+  background-size: cover;
+}
