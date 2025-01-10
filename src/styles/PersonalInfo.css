@@ -1,0 +1,23 @@
+.personal-info .gender::before {
+  background-image: url(../assets/gender-mark-1-svgrepo-com.svg);
+}
+
+.personal-info .birth-date::before {
+  background-image: url(../assets/calendar-day-svgrepo-com.svg);
+}
+
+.personal-info .phone::before {
+  background-image: url(../assets/phone-svgrepo-com.svg);
+}
+
+.personal-info .email-address::before {
+  background-image: url(../assets/email-svgrepo-com.svg);
+}
+
+.personal-info .web-page::before {
+  background-image: url(../assets/web-svgrepo-com.svg);
+}
+
+.personal-info .country::before {
+  background-image: url(../assets/location-pin-alt-1-svgrepo-com.svg);
+}
