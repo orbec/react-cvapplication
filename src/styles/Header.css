@@ -1,7 +1,6 @@
 header {
   background-color: var(--medium-color);
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 1rem;
 }
@@ -36,16 +35,16 @@ input[type="file"] {
 }
 
 .custom-file-upload {
-  border: 1px solid #ccc;
   display: inline-block;
   padding: 6px 12px;
   cursor: pointer;
   background-repeat: no-repeat;
   background-size: 80%;
   background-position: center;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  border: none;
+  border: 5px var(--bright-color) solid;
   background-size: cover;
+  background-color: var(--bright-color);
 }
