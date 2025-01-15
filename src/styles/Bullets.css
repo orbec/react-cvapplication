@@ -1,8 +1,8 @@
-.skills li::before {
+.bullets li::before {
   background-image: url(../assets/dash-lg-svgrepo-com.svg);
 }
 
-.skills .skill {
+.bullets .bullet {
   display: flex;
   gap: 1rem;
 }

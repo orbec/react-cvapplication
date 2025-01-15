@@ -1,8 +1,7 @@
 import "../../styles/Main.css";
 import PersonalInfo from "./PersonalInfo";
-import Skills from "./Skills";
+import Bullets from "./Bullets";
 import Certifications from "./Certifications";
-import Interests from "./Interests";
 import Objective from "./Objective";
 import Education from "./Education";
 import WorkExperience from "./WorkExperience";
@@ -12,9 +11,9 @@ export default function Main() {
       <aside>
         <PersonalInfo />
         <hr className="solid"></hr>
-        <Skills />
+        <Bullets header="Skills" />
         <hr className="solid"></hr>
-        <Interests />
+        <Bullets header="Interests" />
       </aside>
       <main>
         <Objective />

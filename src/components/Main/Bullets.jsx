@@ -1,9 +1,9 @@
-import "../../styles/Skills.css";
+import "../../styles/Bullets.css";
 import { useState } from "react";
 import Modal from "../Modal";
-export default function Skills() {
+export default function Bullets({ header }) {
   const [showModal, setShowModal] = useState(false);
-  const [skills, setSkills] = useState([]);
+  const [bullets, setBullets] = useState([]);
   const handleModal = () => setShowModal(true);
 
   const handleCancel = (e) => {
@@ -14,29 +14,29 @@ export default function Skills() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const skill = {
+    const bullet = {
       id: crypto.randomUUID(),
-      name: e.target.skill.value,
+      name: e.target.bullet.value,
     };
-    const newSkills = [...skills, skill];
-    setSkills(newSkills);
+    const newBullets = [...bullets, bullet];
+    setBullets(newBullets);
 
     setShowModal(false);
   };
   const handleDelete = (id) => () => {
-    const newSkills = skills.filter((skill) => skill.id !== id);
-    setSkills(newSkills);
+    const newSkills = bullets.filter((skill) => skill.id !== id);
+    setBullets(newSkills);
   };
   return (
-    <section className="skills">
+    <section className="bullets">
       <div>
-        <h3>Skills</h3>
+        <h3>{header}</h3>
         <button className="add" onClick={handleModal}></button>
       </div>
 
       <ul>
-        {skills.map((skill) => (
-          <li key={skill.id} className="skill">
+        {bullets.map((skill) => (
+          <li key={skill.id} className="bullet">
             {skill.name}
             <button
               className="delete"
@@ -47,7 +47,7 @@ export default function Skills() {
       </ul>
       {showModal && (
         <Modal
-          modalId="addSkillModal"
+          modalId={header === "Skills" ? "addSkillModal" : "addInterestModal"}
           handleCancel={handleCancel}
           handleSubmit={handleSubmit}
         />

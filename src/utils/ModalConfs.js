@@ -70,10 +70,26 @@ const modalConfigurations = [
     fields: [
       {
         type: "input",
-        id: "skill",
-        name: "skill",
+        id: "bullet",
+        name: "bullet",
         label: "Skill",
         tooltip: "Enter your skill",
+        required: true,
+        inputType: "text",
+      },
+    ],
+  },
+  {
+    id: "addInterestModal",
+    title: "Add Interest",
+    header: "Add Intenrest",
+    fields: [
+      {
+        type: "input",
+        id: "bullet",
+        name: "bullet",
+        label: "Interest",
+        tooltip: "Enter your interest",
         required: true,
         inputType: "text",
       },
