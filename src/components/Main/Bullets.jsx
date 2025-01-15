@@ -1,7 +1,8 @@
 import "../../styles/Bullets.css";
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import Modal from "../Modal";
-export default function Bullets({ header }) {
+export default function Bullets({ header, modal }) {
   const [showModal, setShowModal] = useState(false);
   const [bullets, setBullets] = useState([]);
   const handleModal = () => setShowModal(true);
@@ -45,13 +46,17 @@ export default function Bullets({ header }) {
           </li>
         ))}
       </ul>
-      {showModal && (
-        <Modal
-          modalId={header === "Skills" ? "addSkillModal" : "addInterestModal"}
-          handleCancel={handleCancel}
-          handleSubmit={handleSubmit}
-        />
-      )}
+      {showModal &&
+        createPortal(<div className="backdrop"></div>, document.body)}
+      {showModal &&
+        createPortal(
+          <Modal
+            modalId={modal}
+            handleCancel={handleCancel}
+            handleSubmit={handleSubmit}
+          />,
+          document.body
+        )}
     </section>
   );
 }

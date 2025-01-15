@@ -2,7 +2,6 @@ export default function WorkExperience() {
   return (
     <section>
       <h3>Work Experience</h3>
-      <hr className="solid"></hr>
       <ul>
         <li>
           <h4>Software Developer</h4>

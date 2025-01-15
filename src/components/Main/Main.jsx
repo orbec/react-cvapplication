@@ -1,7 +1,6 @@
 import "../../styles/Main.css";
 import PersonalInfo from "./PersonalInfo";
 import Bullets from "./Bullets";
-import Certifications from "./Certifications";
 import Objective from "./Objective";
 import Education from "./Education";
 import WorkExperience from "./WorkExperience";
@@ -11,15 +10,18 @@ export default function Main() {
       <aside>
         <PersonalInfo />
         <hr className="solid"></hr>
-        <Bullets header="Skills" />
+        <Bullets header="Skills" modal="addSkillModal" />
         <hr className="solid"></hr>
-        <Bullets header="Interests" />
+        <Bullets header="Interests" modal="addInterestModal" />
       </aside>
       <main>
         <Objective />
+        <hr className="solid"></hr>
         <Education />
+        <hr className="solid"></hr>
         <WorkExperience />
-        <Certifications />
+        <hr className="solid"></hr>
+        <Bullets header="Certifications" modal="addCertificationModal" />
       </main>
     </div>
   );

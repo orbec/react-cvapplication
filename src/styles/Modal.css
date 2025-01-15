@@ -29,6 +29,15 @@ form {
   opacity: 1;
 }
 
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 dialog {
   border: none;
   border-radius: 8px;
@@ -38,8 +47,8 @@ dialog {
   width: 100%;
   background-color: var(--medium-color);
   margin: auto;
-  transform: translateY(-30%);
   color: var(--brigth-color);
+  top: 30%;
 }
 
 dialog h3 {

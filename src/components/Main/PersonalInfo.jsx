@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import "../../styles/PersonalInfo.css";
 import Modal from "../Modal";
 export default function PersonalInfo() {
@@ -47,13 +48,17 @@ export default function PersonalInfo() {
         <li className="web-page">{personalInfo.webPage}</li>
         <li className="country">{personalInfo.country}</li>
       </ul>
-      {showModal && (
-        <Modal
-          modalId="editPersonalInfoModal"
-          handleCancel={handleCancel}
-          handleSubmit={handleSubmit}
-        />
-      )}
+      {showModal &&
+        createPortal(<div className="backdrop"></div>, document.body)}
+      {showModal &&
+        createPortal(
+          <Modal
+            modalId="editPersonalInfoModal"
+            handleCancel={handleCancel}
+            handleSubmit={handleSubmit}
+          />,
+          document.body
+        )}
     </section>
   );
 }

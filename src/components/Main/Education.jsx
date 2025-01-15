@@ -2,7 +2,6 @@ export default function Education() {
   return (
     <section>
       <h3>Education</h3>
-      <hr className="solid"></hr>
       <ul>
         <li>
           <h4>University of Technology, Sydney</h4>

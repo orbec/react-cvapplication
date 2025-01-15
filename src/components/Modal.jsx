@@ -40,7 +40,7 @@ function FormGroup({ field }) {
         name={field.name}
         placeholder=" "
         required={field.required}
-        maxLength={field.inputType === "text" ? 50 : undefined}
+        maxLength={field.inputType === "text" ? 100 : undefined}
       />
       <label htmlFor={field.id}>{field.label}</label>
       <span className="tooltip-text">{field.tooltip}</span>

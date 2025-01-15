@@ -27,9 +27,15 @@ li::before {
 }
 
 .personal-info > div,
-.skills > div {
+.bullets > div {
   display: flex;
   align-items: center;
   gap: 1rem;
   width: auto;
+}
+
+.objective div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }

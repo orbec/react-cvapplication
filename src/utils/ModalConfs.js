@@ -95,6 +95,37 @@ const modalConfigurations = [
       },
     ],
   },
+  {
+    id: "addCertificationModal",
+    title: "Add Certification",
+    header: "Add Certification",
+    fields: [
+      {
+        type: "input",
+        id: "bullet",
+        name: "bullet",
+        label: "Certification",
+        tooltip: "Enter your certification",
+        required: true,
+        inputType: "text",
+      },
+    ],
+  },
+  {
+    id: "editObjectiveModal",
+    title: "Edit your Objective",
+    header: "Edit your Objective",
+    fields: [
+      {
+        type: "textarea",
+        id: "objective",
+        name: "objective",
+        label: "Objective",
+        tooltip: "Edit your objective",
+        required: true,
+      },
+    ],
+  },
 ];
 
 export { modalConfigurations };

@@ -1,15 +1,43 @@
+import { useState } from "react";
+import { createPortal } from "react-dom";
+import Modal from "../Modal";
 export default function Objective() {
+  const [showModal, setShowModal] = useState(false);
+  const [objective, setObjective] = useState(
+    "You can edit your objective and professional profile here."
+  );
+  const handleModal = () => setShowModal(true);
+
+  const handleCancel = (e) => {
+    e.preventDefault();
+    setShowModal(false);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newObjective = e.target.objective.value;
+    setObjective(newObjective);
+
+    setShowModal(false);
+  };
   return (
-    <section>
-      <h3>Objective</h3>
-      <hr className="solid"></hr>
-      <p>
-        I am a highly motivated and enthusiastic individual with a keen interest
-        in technology and software development. I am looking to secure a
-        challenging and rewarding role in the IT industry, where I can utilize
-        my skills and knowledge to contribute to the success of the
-        organization.
-      </p>
+    <section className="objective">
+      <div>
+        <h3>Objective</h3>
+        <button className="edit" onClick={handleModal}></button>
+      </div>
+      <p>{objective}</p>
+      {showModal &&
+        createPortal(<div className="backdrop"></div>, document.body)}
+      {showModal &&
+        createPortal(
+          <Modal
+            modalId="editObjectiveModal"
+            handleCancel={handleCancel}
+            handleSubmit={handleSubmit}
+          />,
+          document.body
+        )}
     </section>
   );
 }
