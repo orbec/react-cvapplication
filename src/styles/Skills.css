@@ -1,0 +1,8 @@
+.skills li::before {
+  background-image: url(../assets/dash-lg-svgrepo-com.svg);
+}
+
+.skills .skill {
+  display: flex;
+  gap: 1rem;
+}

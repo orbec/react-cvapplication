@@ -20,3 +20,7 @@ button.add {
 button.done {
   background-image: url(../assets/done-round-svgrepo-com.svg);
 }
+
+button.delete {
+  background-image: url(../assets/trash-svgrepo-com.svg);
+}

@@ -1,3 +1,4 @@
+import "../../styles/Skills.css";
 import { useState } from "react";
 import Modal from "../Modal";
 export default function Skills() {
@@ -13,10 +14,18 @@ export default function Skills() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newSkills = [...skills, e.target.skill.value];
+    const skill = {
+      id: crypto.randomUUID(),
+      name: e.target.skill.value,
+    };
+    const newSkills = [...skills, skill];
     setSkills(newSkills);
 
     setShowModal(false);
+  };
+  const handleDelete = (id) => () => {
+    const newSkills = skills.filter((skill) => skill.id !== id);
+    setSkills(newSkills);
   };
   return (
     <section className="skills">
@@ -27,7 +36,13 @@ export default function Skills() {
 
       <ul>
         {skills.map((skill) => (
-          <li key={skill.id}>{skill.name}</li>
+          <li key={skill.id} className="skill">
+            {skill.name}
+            <button
+              className="delete"
+              onClick={handleDelete(skill.id)}
+            ></button>
+          </li>
         ))}
       </ul>
       {showModal && (

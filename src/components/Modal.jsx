@@ -67,7 +67,7 @@ export default function Modal(props) {
   );
 
   return (
-    <dialog id={diagConf.id} open="true">
+    <dialog id={diagConf.id} open={true}>
       <h3>{diagConf.header}</h3>
       <form method="dialog" onSubmit={props.handleSubmit}>
         {diagConf.fields.map((field) => (
