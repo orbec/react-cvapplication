@@ -1,0 +1,19 @@
+.expeerience li {
+  display: list-item;
+}
+
+.experience li::before {
+  content: none;
+}
+
+.experience div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.experience h4,
+.experience p {
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+}

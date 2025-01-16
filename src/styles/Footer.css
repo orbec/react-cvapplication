@@ -3,16 +3,19 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 0px 0px 10px 10px;
 }
 
 footer > .container {
   display: flex;
   padding-right: 1rem;
   gap: 1rem;
+  border-radius: 0px 0px 10px 10px;
 }
 
 footer p {
   flex: 2 0 auto;
+  margin-left: 1rem;
 }
 footer a {
   margin-left: auto;

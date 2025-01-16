@@ -2,8 +2,7 @@ import "../../styles/Main.css";
 import PersonalInfo from "./PersonalInfo";
 import Bullets from "./Bullets";
 import Objective from "./Objective";
-import Education from "./Education";
-import WorkExperience from "./WorkExperience";
+import Experience from "./Experience";
 export default function Main() {
   return (
     <div className="content">
@@ -17,9 +16,9 @@ export default function Main() {
       <main>
         <Objective />
         <hr className="solid"></hr>
-        <Education />
+        <Experience header="Education" modal="addEducationModal" />
         <hr className="solid"></hr>
-        <WorkExperience />
+        <Experience header="Work Experience" modal="addWorkModal" />
         <hr className="solid"></hr>
         <Bullets header="Certifications" modal="addCertificationModal" />
       </main>

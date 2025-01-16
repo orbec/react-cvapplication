@@ -61,20 +61,18 @@ function Options({ options }) {
   );
 }
 
-export default function Modal(props) {
-  const diagConf = modalConfigurations.find(
-    (modal) => modal.id === props.modalId
-  );
+export default function Modal({ modalId, handleSubmit, handleCancel }) {
+  const diagConf = modalConfigurations.find((modal) => modal.id === modalId);
 
   return (
     <dialog id={diagConf.id} open={true}>
       <h3>{diagConf.header}</h3>
-      <form method="dialog" onSubmit={props.handleSubmit}>
+      <form method="dialog" onSubmit={handleSubmit}>
         {diagConf.fields.map((field) => (
           <FormGroup key={field.id} field={field} />
         ))}
         <div className="dialog-buttons">
-          <button type="button" id="cancel-button" onClick={props.handleCancel}>
+          <button type="button" id="cancel-button" onClick={handleCancel}>
             Cancel
           </button>
           <button type="submit">Submit</button>
